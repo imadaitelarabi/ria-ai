@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add RTL support */
+.rtl {
+  direction: rtl;
+}
+
+.rtl .flex {
+  flex-direction: row-reverse;
+}
+
+/* Add any custom styles if necessary */
