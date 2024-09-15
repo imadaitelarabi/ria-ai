@@ -62,7 +62,7 @@ export const useChatStore = defineStore('chat', {
       this.receiveMessage('جاري الكشف عن الدولة...');
       
       try {
-        const response = await axios.get('http://localhost:3000/api/country');
+        const response = await axios.get('/api/country');
         console.log('data', response.data);
         const { country, flagUrl } = response.data;
         
@@ -92,7 +92,7 @@ export const useChatStore = defineStore('chat', {
     async suggestProblems() {
       console.log('Suggesting problems');
       try {
-        const response = await axios.get('http://localhost:3000/api/problems');
+        const response = await axios.get('/api/problems');
         const suggestedProblems = response.data as Problem[];
 
         this.receiveMessage('إليك بعض المشكلات المقترحة:');
